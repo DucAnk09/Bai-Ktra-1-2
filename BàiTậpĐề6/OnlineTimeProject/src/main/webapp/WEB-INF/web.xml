@@ -1,0 +1,25 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+
+    <servlet>
+        <servlet-name>OnlineTimeServlet</servlet-name>
+        <servlet-class>com.example.servlet.OnlineTimeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OnlineTimeServlet</servlet-name>
+        <url-pattern>/online</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>SessionFilter</filter-name>
+        <filter-class>com.example.filter.SessionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SessionFilter</filter-name>
+        <url-pattern>/online</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>com.example.listener.SessionListener</listener-class>
+    </listener>
+
+</web-app>
